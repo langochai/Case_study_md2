@@ -1,5 +1,5 @@
 import {Admin} from "./Admin";
-import {Authority, Employee} from "./Employee";
+import {Employee} from "./Employee";
 
 export class AccountManager {
     list: (Admin | Employee) []
@@ -71,11 +71,7 @@ export class AccountManager {
         console.table(list)
     }
 
-    size(): number {
-        return this.list.length;
-    }
-
-    changeUserName(userName: string, newUserName: string) {
+     changeUserName(userName: string, newUserName: string) {
         let account = this.get(userName)
         if (!this.list.includes(this.get(newUserName))) account.username = newUserName
     }
@@ -83,10 +79,5 @@ export class AccountManager {
     changePassword(userName: string, password: string) {
         let account = this.get(userName)
         account.setPassword(password)
-    }
-
-    changeAuthority(username: string, authority: Authority) {
-        let account = this.get(username)
-        account.setAuthority(authority)
     }
 }
