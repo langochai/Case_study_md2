@@ -163,64 +163,6 @@ function AdminMenuOrStay(usernameForChecking) {
     }
 }
 
-/*
-        case 1:
-            let nameForAu = readlineSync.question(`Enter username:`)
-            let checkNameForAu = list.get(nameForAu)
-            if (checkNameForAu) {
-                if (readlineSync.keyInYN(`press Y for "Admin", press N for "Employee"`)) {
-                    list.changeAuthority(nameForAu, "Admin")
-                } else {
-                    list.changeAuthority(nameForAu, "Employee")
-                }
-            } else {
-                console.log(`Cannot find this username`)
-            }
-            mainMenuOrAdminMenu()
-            break
-        case 2:
-            let nameForPW = readlineSync.question(`Enter username:`)
-            let checkNameForPW = list.get(nameForPW)
-            if (checkNameForPW) {
-                let newPassword = readlineSync.question(`Enter new password:`, {hideEchoBack: true})
-                let validAccForNewPW = list.validAcc(nameForPW, newPassword)
-                if (validAccForNewPW) {
-                    list.changePassword(nameForPW, newPassword)
-                } else {
-                    console.log(`Wrong password input`)
-                }
-            } else {
-                console.log(`Cannot find this username`)
-            }
-            mainMenuOrAdminMenu()
-            break
-        case 3:
-            let newNameForName = readlineSync.question(`Enter username:`)
-            let checkNameForName = list.get(newNameForName)
-            if (checkNameForName) {
-                let newUsername = readlineSync.question(`Enter new username:`)
-                let validAccForNewName = list.validAcc(newNameForName, newUsername)
-                if (validAccForNewName) {
-                    list.changeUserName(newNameForName, newUsername)
-                } else {
-                    console.log(`Wrong username input`)
-                }
-            } else {
-                console.log(`Cannot find this username`)
-            }
-            mainMenuOrAdminMenu()
-            break
-        case 4:
-            console.table(list.get(usernameForChecking))
-            mainMenuOrAdminMenu()
-            break
-        case 5:
-            let nameForDelete = readlineSync.question(`Enter username:`)
-            list.remove(nameForDelete)
-            mainMenuOrAdminMenu()
-            break
- */
-
 function menuForEmployee(username) {
     let option: string[] = ["Show list of accounts as employee", "Change username", "Change password"]
     let index = readlineSync.keyInSelect(option, 'Please choose:')
